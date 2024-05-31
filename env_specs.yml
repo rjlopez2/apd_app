@@ -1,0 +1,55 @@
+name: map_app
+channels:
+  - pytorch
+  - conda-forge  
+  - fastai
+
+dependencies:  
+  - python>=3.10
+
+ # Utilities
+ # -------------------------------------------------------------------------
+  - tqdm
+  - rich
+  - typer
+
+  # Jupyter Notebook
+  # -------------------------------------------------------------------------
+  - conda-forge::notebook
+  - conda-forge::ipykernel
+  - conda-forge::ipywidgets
+  - conda-forge::jupyter_contrib_nbextensions
+  
+  # nbdev
+  # -------------------------------------------------------------------------
+  #- fastai::nbdev>=2.3.12
+
+  # PyTorch & Deep Learning
+  # -------------------------------------------------------------------------
+  #- pytorch>=2
+  # NOTE: add pytorch-cuda if using a CUDA enabled GPU. You will need to 
+  #       remove this if you are on Apple Silicon
+  # - pytorch::pytorch-cuda
+  #- conda-forge::pytorch-lightning
+
+  # Plotting
+  # -------------------------------------------------------------------------
+  - conda-forge::matplotlib
+  - conda-forge::seaborn
+  
+  # Data Wrangling
+  # -------------------------------------------------------------------------
+  - conda-forge::scikit-learn
+  - pandas>=2
+  - numpy
+  - scipy    
+
+  # Pip / non-conda packages
+  # -------------------------------------------------------------------------
+  - pip
+  - pip: 
+    # PyTorch & Deep Learning
+    # -----------------------------------------------------------------------
+    # - QtPy
+    - PyQt6
+    - qtpy>=1.10.0
